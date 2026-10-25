@@ -76,8 +76,14 @@ body {
     <p class="tagline">Ruminations of a Mind - Poetry</p>
   </header>
 
-  <h2>Random of the Day</h2>
-<a href="hakiu/one.html">Your Poem Title</a>
+<div id="poem-container"></div>
+<script>
+  fetch('haiku/one.html')
+    .then(response => response.text())
+    .then(text => {
+      document.getElementById('poem-container').innerHTML = text;
+    });
+</script>
   
   <section class="poem-list">
     <h2>Published Poems</h2>
