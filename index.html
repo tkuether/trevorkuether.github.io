@@ -76,14 +76,20 @@ body {
     <p class="tagline">Ruminations of a Mind - Poetry</p>
   </header>
 
+
+   <center>
 <div id="poem-container"></div>
 <script>
-  fetch('haiku/one.html')
+  fetch('hakiu/one.html')
     .then(response => response.text())
-    .then(text => {
-      document.getElementById('poem-container').innerHTML = text;
+    .then(html => {
+      const temp = document.createElement('div');
+      temp.innerHTML = html;
+      const poem = temp.querySelector('.poem');
+      document.getElementById('poem-container').innerHTML = poem.innerHTML;
     });
 </script>
+  </center>
   
   <section class="poem-list">
     <h2>Published Poems</h2>
