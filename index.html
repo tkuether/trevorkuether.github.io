@@ -90,11 +90,12 @@ body {
 
 <div id="poem-container"></div>
 <script>
-  fetch('haiku/one.html')
+  fetch('hakiu/one.html')
     .then(response => response.text())
     .then(html => {
       const temp = document.createElement('div');
       temp.innerHTML = html;
+
       const poem = temp.querySelector('.poem');
       document.getElementById('poem-container').innerHTML = poem.innerHTML;
     });
