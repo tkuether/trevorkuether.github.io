@@ -86,7 +86,9 @@ body {
     <p class="tagline">Ruminations of a Mind - Poetry</p>
   </header>
 
+<h2 id="poem-title"></h2>
 <div id="poem-container"></div>
+
 <script>
   fetch('haiku/one.html')
     .then(response => response.text())
@@ -94,7 +96,10 @@ body {
       const temp = document.createElement('div');
       temp.innerHTML = html;
 
+      const title = temp.querySelector('.title');
       const poem = temp.querySelector('.poem');
+
+      document.getElementById('poem-title').innerText = title.innerText;
       document.getElementById('poem-container').innerHTML = poem.innerHTML;
     });
 </script>
