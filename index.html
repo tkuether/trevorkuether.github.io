@@ -14,7 +14,28 @@ body {
   color: #222;
   line-height: 1.6;
 }
+    
+.top-nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 0;
+  font-family: Georgia, serif;
+  background: transparent;
+}
 
+.top-nav a {
+  text-decoration: none;
+  color: #444;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.top-nav a:hover {
+  color: #000;
+}
+    
     header {
       text-align: center;
       padding: 40px 20px 20px;
@@ -96,7 +117,15 @@ body {
 </head>
 
 <body>
-
+  
+<nav class="top-nav">
+  <a href="about.html">About</a>
+  <a href="https://substack.com">Substack</a>
+  <a href="hakiu/">Haikus</a>
+  <a href="lunes/">Lunes</a>
+  <a href="poems/">Poems</a>
+</nav>
+  
   <header>
     <h1>Trevor Kuether</h1>
     <p class="tagline">Ruminations of a Mind - Poetry</p>
